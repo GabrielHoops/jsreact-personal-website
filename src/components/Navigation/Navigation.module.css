@@ -1,0 +1,10 @@
+.nav-link {
+    color: #ffffff;
+}
+.active {
+    background-color: #da1f37;
+    border-radius: 5px;
+}
+.logo {
+    height: 35px;
+}
