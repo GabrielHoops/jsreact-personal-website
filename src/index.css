@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.content{
+  border: 2px solid  #443f54;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+.active {
+  background-color: #da1f37;
+  border-radius: 5px;
+}
+
+.archive {
+  background-color: #2a2344;
+}
+.backgroundrelative {
+  position: relative;
+}
