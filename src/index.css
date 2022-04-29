@@ -32,3 +32,40 @@ code {
 .backgroundrelative {
   position: relative;
 }
+
+.archivehead {
+  font-size: 2rem;
+  text-align: center;
+}
+.archivetext {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.dashedbox, .solidbox {
+  border: 2px dashed #68223e;
+  border-top-right-radius: 30px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  margin-top: 35px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.solidbox {
+  border: 2px solid #68223e;
+}
+.archiveicon {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -16px;
+  left: 10px;
+  background-color: #de1734;
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+}
+.archiveiconsvg {
+  margin-top: 2px;
+  height: 25px;
+  width: 25px;
+}

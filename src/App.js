@@ -5,16 +5,33 @@ import Image from "./components/Image/Image";
 import Socials from "./components/Socials/Socials";
 import Archive from "./components/Archive/Archive";
 import {useEffect, useState} from 'react';
+import {addContactToApi, getAllContacts} from "./ContactApiServices";
+import Contact from "./components/Contact/Contact";
 
 function App() {
     const [experience,setExperience] = useState([]);
+    const [contacts,setContacts] = useState([]);
     async function fetchData() {
         const response = await fetch('http://localhost:4000/experience');
         const data = await response.json();
         setExperience(data);
     }
+
+    function addContact(contact) {
+        let id=contacts.length+1;
+        contact.id = id;
+        addContactToApi(contact);
+        alert('Danke für deine Nachricht');
+    }
+
+    async function loadContacts() {
+        const apiContacts = await getAllContacts();
+        setContacts(apiContacts);
+    }
+
     useEffect(()=> {
         fetchData();
+        loadContacts();
     },[])
     return (
         <div className="App">
@@ -42,6 +59,7 @@ function App() {
                     <div className="col-md-2"></div>
                 </div>
             </div>
+        <Contact sendDataOnSubmit={addContact}/>
         </div>
     );
 }
