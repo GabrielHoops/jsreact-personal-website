@@ -1,0 +1,46 @@
+{
+  "experience": [
+    {
+      "id": 1,
+      "style": "dashedbox",
+      "icon": "images/award.svg",
+      "head": "2",
+      "text": "Auszeichnungen"
+    },
+    {
+      "id": 2,
+      "style": "solidbox",
+      "icon": "images/people.svg",
+      "head": "50+",
+      "text": "Kunden"
+    },
+    {
+      "id": 3,
+      "style": "dashedbox",
+      "icon": "images/book.svg",
+      "head": "08",
+      "text": "Jahre Erfahrung"
+    },
+    {
+      "id": 4,
+      "style": "solidbox",
+      "icon": "images/cal.svg",
+      "head": "100+",
+      "text": "Projekte"
+    }
+  ],
+  "texts": {
+    "contacttext": {
+      "text": "Du hast Fragen oder Anregungen? Oder möchtest einfach Meinungen austauschen? Dann schreib mir einfach eine Nachricht!"
+    }
+  },
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Gabriel Hoops",
+      "email": "Gabriel.Hoops@adesso.de",
+      "msg": "",
+      "checkAGB": true
+    }
+  ]
+}

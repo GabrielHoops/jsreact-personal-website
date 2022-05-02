@@ -1,0 +1,85 @@
+.backgroundcontainer {
+    position: relative;
+    min-height: 336px;
+}
+
+.backgroundme {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.circlefull {
+    background-color: #d5213a;
+    border-radius: 120px;
+    height: 220px;
+    width: 220px;
+    position: absolute;
+    bottom: 60px;
+    z-index: -1;
+    left: 50px;
+}
+.circledash {
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(44,20,42,1) 0%, rgba(35,20,41,1) 100%);
+    border: 2px dashed #32283b;
+    border-radius: 120px;
+    height: 220px;
+    width: 220px;
+    position: absolute;
+    bottom: 130px;
+    z-index: -2;
+    left: 120px;;
+}
+.smallcirclewhite {
+    position: absolute;
+    left: 42px;
+    top: 110px;
+    height: 12px;
+    width: 12px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.smallcirclered {
+    position: absolute;
+    left: 260px;
+    top: 22px;
+    height: 12px;
+    width: 12px;
+    background-color: #f52243;
+    border-radius: 10px;
+}
+.smallpolywhite {
+    position: absolute;
+    left: 260px;
+    top: 75px;
+    width: 0px;
+    height: 0px;
+    border-top: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #ffffff;
+    transform: rotate(-80deg);
+}
+.smallpolywhitemid {
+    position: absolute;
+    left: 55px;
+    top: 20px;
+    width: 0px;
+    height: 0px;
+    border-top: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #ffffff;
+    transform: rotate(90deg);
+}
+.smallpolyred {
+    position: absolute;
+    left: 274px;
+    top: 130px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #f52243;
+    transform: rotate(90deg);
+}
