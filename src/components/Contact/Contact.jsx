@@ -43,7 +43,7 @@ export default function Contact({sendDataOnSubmit,text}) {
         <>
             <ContactText text={text} />
             <div className="placeholder"></div>
-            <form onSubmit={onSubmit}>
+            <form id="ContactForm" onSubmit={onSubmit}>
                 <ContactNameInmput onNameChange={onNameChange} />
                 <div className="placeholder"></div>
                 <ContactEmailInput onEmailChange={onEmailChange} />

@@ -19,3 +19,16 @@ export async function addContactToApi(contact) {
         console.error('error ' + data);
     }
 }
+
+export async function loadApiExperienceData() {
+    const response = await fetch('http://localhost:4000/experience');
+    const data = await response.json();
+    return data;
+}
+
+export async function loadApiContactText() {
+    const response = await fetch('http://localhost:4000/texts');
+    const data = await response.json();
+    let text = data.contacttext.text;
+    return text;
+}
