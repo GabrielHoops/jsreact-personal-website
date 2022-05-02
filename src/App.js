@@ -7,11 +7,13 @@ import Archive from "./components/Archive/Archive";
 import {useEffect, useState} from 'react';
 import {addContactToApi, getAllContacts} from "./ContactApiServices";
 import Contact from "./components/Contact/Contact";
+import ContactText from "./components/Contact/ContactText";
 
 function App() {
     const [experience,setExperience] = useState([]);
     const [contacts,setContacts] = useState([]);
-    const [contacttext] = useState([]);
+    const [contactText,setContactText] = useState("");
+    let triggerSubmit = false;
 
     async function fetchData() {
         const response = await fetch('http://localhost:4000/experience');
@@ -19,11 +21,23 @@ function App() {
         setExperience(data);
     }
 
+    async function loadContactText() {
+        const response = await fetch('http://localhost:4000/texts');
+        const data = await response.json();
+        let text = data.contacttext.text;
+        setContactText(text);
+    }
+
     function addContact(contact) {
-        let id=contacts.length+1;
-        contact.id = id;
-        addContactToApi(contact);
-        alert('Danke für deine Nachricht');
+        if (triggerSubmit === false) {
+            let id = contacts.length + 1;
+            contact.id = id;
+            addContactToApi(contact);
+            triggerSubmit = true;
+            alert('Danke für deine Nachricht');
+        } else {
+
+        }
     }
 
     async function loadContacts() {
@@ -34,7 +48,9 @@ function App() {
     useEffect(()=> {
         fetchData();
         loadContacts();
-    },[])
+        loadContactText();
+    },[]);
+
     return (
         <div className="App">
             <Navigation/>
@@ -61,7 +77,7 @@ function App() {
                     <div className="col-md-2"></div>
                 </div>
             </div>
-        <Contact sendDataOnSubmit={addContact}/>
+            <Contact sendDataOnSubmit={addContact} text={contactText} />
         </div>
     );
 }

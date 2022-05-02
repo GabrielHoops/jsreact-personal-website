@@ -7,7 +7,7 @@ import ContactMessageInput from "./ContactMessageInput";
 import ContactCheckAGBCheckbox from "./ContactCheckAGBCheckbox";
 import SendButton from "../SendButton";
 
-export default function Contact({sendDataOnSubmit}) {
+export default function Contact({sendDataOnSubmit,text}) {
     const [name,setName] = useState('');
     const [email,setEmail] = useState('');
     const [msg,setMsg] = useState('');
@@ -41,7 +41,7 @@ export default function Contact({sendDataOnSubmit}) {
 
     return (
         <>
-            <ContactText text="Du hast Fragen oder Anregungen? Oder möchtest einfach Meinungen austauschen? Dann schreib mir einfach eine Nachricht!" />
+            <ContactText text={text} />
             <div className="placeholder"></div>
             <form onSubmit={onSubmit}>
                 <ContactNameInmput onNameChange={onNameChange} />

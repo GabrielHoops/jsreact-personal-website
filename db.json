@@ -29,6 +29,11 @@
       "text": "Projekte"
     }
   ],
+  "texts": {
+    "contacttext": {
+      "text": "Du hast Fragen oder Anregungen? Oder möchtest einfach Meinungen austauschen? Dann schreib mir einfach eine Nachricht!"
+    }
+  },
   "contacts": [
     {
       "id": 1,
@@ -50,6 +55,13 @@
       "msg": "sdfsdf",
       "checkAGB": true,
       "id": 3
+    },
+    {
+      "name": "dfsdfdf",
+      "email": "vcbgbghnt@sdfdf",
+      "msg": "sdfdffghgjhkhuk",
+      "checkAGB": true,
+      "id": 4
     }
   ]
 }
