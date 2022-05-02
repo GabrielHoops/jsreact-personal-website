@@ -11,6 +11,8 @@ import Contact from "./components/Contact/Contact";
 function App() {
     const [experience,setExperience] = useState([]);
     const [contacts,setContacts] = useState([]);
+    const [contacttext] = useState([]);
+
     async function fetchData() {
         const response = await fetch('http://localhost:4000/experience');
         const data = await response.json();
