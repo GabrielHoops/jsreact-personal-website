@@ -19,7 +19,6 @@ function App() {
             let id = contacts.length + 1;
             contact.id = id;
             addContactToApi(contact);
-            triggerSubmit = true;
             alert('Danke für deine Nachricht');
             document.getElementById('ContactForm').submit();
             triggerSubmit = true;

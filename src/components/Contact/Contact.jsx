@@ -54,7 +54,6 @@ export default function Contact({sendDataOnSubmit,text}) {
                 <div className="placeholder"></div>
                 <SendButton />
             </form>
-        <div id="thx"></div>
-            </>
+        </>
     )
 }
